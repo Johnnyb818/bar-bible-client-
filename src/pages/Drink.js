@@ -1,30 +1,42 @@
 import React from "react";
 
+
+
 const Drink = (props) => {
 
     const {drink} = props
 
     const loadDrink = () => (
         
-        <div>
+        <div className="container">
+            <div className="row">
             {drink.map((drink) => (
-                <div>
-                    <img src={drink.img}></img>
-                    <h1>{drink.name}</h1>
-                    <h3>{drink.spirit}</h3>
-                    <h3>{drink.mixer1}</h3>
-                    <h3>{drink.mixer2}</h3>
-                    <h3>{drink.mixer3}</h3>
-                    <h3>{drink.mixer4}</h3>
-                    <h3>{drink.mixer5}</h3>
-                    <h3>{drink.mixer6}</h3>
-                    <h3>{drink.mixer7}</h3>
-                    <h3>{drink.mixer8}</h3>
-                    <h3>{drink.mixer9}</h3>
-                    <h3>{drink.garnish}</h3>
-                    <p>{drink.instructions}</p>
-                </div>
+                    <div className="col s6 m4 l4">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={drink.img}/>
+                                <span className="card-title">{drink.name}</span>
+                            </div>
+                            <div className="card-content">
+                                <p>{drink.spirit}</p>
+                                <p>{drink.mixer1}</p>
+                                <p>{drink.mixer2}</p>
+                                <p>{drink.mixer3}</p>
+                                <p>{drink.mixer4}</p>
+                                <p>{drink.mixer5}</p>
+                                <p>{drink.mixer6}</p>
+                                <p>{drink.mixer7}</p>
+                                <p>{drink.mixer8}</p>
+                                <p>{drink.mixer9}</p>
+                                <p>{drink.garnish}</p> 
+                                <div class="card-action">                              
+                                    <p>{drink.instructions}</p>
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>
             ))}
+            </div>
         </div>
     )
     const loading = <h1>Loading...</h1>
