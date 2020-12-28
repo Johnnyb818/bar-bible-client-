@@ -6,6 +6,10 @@ import Syrup from "./pages/Syrup.js"
 import Tool from "./pages/Tool.js"
 import Video from "./pages/Video.js"
 import Home from "./pages/Home.js";
+import { AppBar, IconButton, Typography, Button } from "@material-ui/core"
+import  ToolBar  from "@material-ui/core/ToolBar"
+
+
 
 
 function App() {
@@ -63,29 +67,34 @@ function App() {
 
   return (
     <div>
-      <header>
-	      <nav>
-          <Link to="/">
-          <a>Home</a>
-          </Link>
+        <AppBar postion='static'>
+          <ToolBar>         
+            <nav>
+              <div>
+                <a>Bar Bible</a>
+                    <Link to="/">
+                    <a>Home</a>
+                    </Link>
 
-          <Link to="/drinks">
-            <a>Cocktail Recipes</a>
-          </Link>
+                    <Link to="/drinks">
+                      <a>Cocktail Recipes</a>
+                    </Link>
 
-          <Link to="/syrups">
-            <a>Syrup Recipes</a>
-          </Link>
+                    <Link to="/syrups">
+                      <a>Syrup Recipes</a>
+                    </Link>
 
-          <Link to="/tools">
-            <a>Bar Gear</a>
-          </Link>
+                    <Link to="/tools">
+                      <a>Bar Gear</a>
+                    </Link>
 
-          <Link to="/videos">
-            <a>Tutorials</a>
-          </Link>
-	      </nav>
-      </header>
+                    <Link to="/videos">
+                      <a>Tutorials</a>
+                    </Link>
+              </div>
+            </nav>
+          </ToolBar>
+        </AppBar>          
       <main>
         <Switch>
           <Route exact path="/" render={(rp) => <Home/>} />

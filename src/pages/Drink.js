@@ -11,8 +11,8 @@ const Drink = (props) => {
         <div className="container">
             <div className="row">
             {drink.map((drink) => (
-                    <div className="col s6 m4 l4">
-                        <div className="card">
+                    <div className="col s10 m6 l4">
+                        <div className="card hoverable">
                             <div className="card-image">
                                 <img src={drink.img}/>
                                 <span className="card-title">{drink.name}</span>
